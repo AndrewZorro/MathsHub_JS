@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_practise</title>
+    <!-- чтобы поменять иконку на сайте в закладках браузера, сделаем ссылку на рисунок в формате png или ico -->
+    <!-- выберем в яндекс браузере в поисковой строке icon - вкладка Картинки - выбрать файл - выберем формат -->
+    <!-- выберите понравившуюся картинку из списка - щелкните на "открыть в новом окне" - скопируйте ссылку -->
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/523-5233640_icon-hd-png-download.png">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- ID от класса отличается тем, что ID уникальный, а класс можно задать нескольким тэгам, элементам. 
+        ID имеет больший  приоритет , чем класс, поэтому лучше ID в стилях не использовать, чтобы не было 
+        конфликтов в стилях-->
+    <!-- ctrl + x - удалить строку кода -->
+    <!-- ctrl + / - закоментировать -->
+    <!-- ctrl + пробел - открыть список -->
+    <!-- alt + shift + F - выровнять код -->
+    <!-- <h1>Анкета</h1>
+    <h2>Общая информация</h2>
+        div - блочный элемент, в который помещается контент. Используется для читаемости кода -->
+    <header>
+        <nav>
+            <!-- сделаем ссылку с помощью тэга а -->
+            <a href="#">About us</a>
+            <a href="#">Hobby</a>
+            <a href="#">Contacts</a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <div class='about_us'>
+            <div>
+                <h2>Красивая картинка</h2>
+                <!-- чтобы выбрать элемент из интернета -->
+                <!-- <img src="https://tinypng.com/images/social/website.jpg" alt="image" title="panda"> -->
+                <!-- чтобы выбрать элемент с компа -->
+                <img src="./Gentleman.jpg" alt="image" title="panda">
+                <div>
+                    <!-- обозначим следующий div параграфами p, т.к. он содержит только текст -->
+                    <div class='About_us-description'>
+                        <p>
+                            <strong>Имя</strong>
+                            <span>Андрей</span>
+                        </p>
+                        <p>
+                            <strong>Изучаемый язык:</strong>
+                            <span>JavaScript</span>
+                        </p>
+                        <p>
+                            <strong>Любите ли вы этот язык?</strong>
+                            <span></span>
+                        </p>
+                        <!-- <br> - дают отступы
+                <br>  -->
+                    </div>
+                </div>
+                <div class='my_game' id='my_game'>
+                    <h2>Игра</h2>
+                    <p></p>
+                    <!-- в тэге input лучше всегда указывать атрибут type. Основные = button, reset, search, submit,
+                 e-mail, number, tel, password, text -->
+                    <!-- <input type = "button" value = "put me" >  -->
+                    <input type="number" hidden>
+                    <!-- hidden - значит скрытый -->
+                    <!-- <input type="button" value="Старт" -->
+                    <button>Начать</button>
+                    <!-- <button> отличается от input type="button" тем, как они наполняются контентом (с value или без )-->
+                </div>
+                <div class = "choose_block">
+                    <h2>Выберите элемент</h2>
+                    <p>Элементов выбрано: <span>0</span></p>
+                    <div class = "choose_block-container">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                    </div>
+
+
+                </div>
+    </main>
+
+
+    <script src="./script.js"></script>
+
+    <footer> 2023 </footer>
+</body>
+
+</html>

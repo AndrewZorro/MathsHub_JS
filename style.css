@@ -1,0 +1,179 @@
+/* импортируем шрифт с сайта google.fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+/* применим ко всем элементам единые правила */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+/* /* чтобы найти хорошие шрифты - см. сайт google.fonts */
+header {
+    background-color: lightgray;
+    height: 50px;
+    /* подключим шрифт  */
+    font-family: 'Comfortaa', cursive;
+}
+
+nav {
+    /* border: 1px dotted black; */
+/* ширина может измеряться в % от родительского значения - header или в пикселях */
+/* width: 50%; */
+/* чтобы ширина настраивалась автоматически от размера всего бара, нужно использовать max-content */
+/* width: max-content; */
+/* чтобы ширина настраивалась автоматически от размера самого длинного элемента бара, 
+    нужно использовать min-content */
+/* width: min-content; */
+/* чтобы сделать высоту nav, как у родителя (header), можно использовать inherit */
+    height: inherit; 
+    display: flex;
+    /* основные 2 свойства, которые нужно запомнить - это justify-content и align-items */
+    justify-content: start;
+    align-items: center; 
+}
+
+
+/* чтобы обратиться ко всем а внутри nav, используем */
+nav>a {
+    /* чтобы убрать нижнее подчеркивание у ссылок */
+    text-decoration: none;
+    color: black;
+    /* чтобы настроить отступы для каждого а-элемента: первое число - отступы сверху и снизу, второе число 
+    - слева и справа */
+    padding: 0 30px;
+    /* чтобы настроить настроить размер шрифта */
+    font-size: 20px;
+}
+
+/* чтобы перейти к классу about_us */
+.about_us {
+    /* чтобы элементы в классе располоагались в строку */
+    display: flex;
+    /* чтобы определить порядок расположение элементов в классе */
+    flex-direction: row;
+    /* чтобы расположить элементы класса в центре страницы */
+    justify-content: center;
+}
+
+.about_us image {
+    width: 2px;
+}
+
+.About_us-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.About_us-description * {
+    /* символ * означает применение ко всему классу */
+    padding: 5px;
+}
+
+img {
+    /* widthб margin и т.д. - это свойства */
+    width: 300px;
+    /* margin: 10px 150px; */
+    /* margin: 10px 200px 10px 150px; */
+    margin: 10px auto;
+    display: block;
+    /* чтобы картинка сжималась или растягивалась пропорционально высоте и ширине. В основном лучше испоьзовать 
+    contain или cover */
+    object-fit: cover;
+    object-position: top;
+
+}
+
+span {
+    font-size: 20px;
+}
+
+.name {
+    color: blue;
+}
+
+#skill {
+    color: green;
+}
+
+h1 {
+    /* border: 3px solid grey; */
+    padding: 0;
+    margin: 30 px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* h2 {
+    text-align: center;
+} */
+
+
+.my_game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300 px;
+    margin: 0 auto;
+}
+/* чтобы сделать текст во всех элеменах игры по центру */
+.my_game > * {
+    text-align: center;
+}
+/* чтобы сделать общие свойства в конкретных элеменах игры */
+.my_game input, .my_game button {
+    /* чтобы убрать обводку */
+    border: none;
+    /* чтобы элементы не слипались */
+    margin: 5px;
+    /* чтобы увеличить высоту элементов */
+    min-height: 30px;
+}
+.my_game button {
+    /* чтобы уменьшить ширину элемента до ширины текста */
+    width: max-content;
+    background-color: aqua;
+    /* чтобы текст не был впритык к рамкам элемента */
+    padding: 0 10px;
+    /* чтобы скруглить углы */
+    border-radius: 5px;
+}
+.my_game input {
+    background-color: lightgrey;
+    /* чтобы убрать обводку */
+    outline: none;
+
+}
+.my_game {
+    display: flex;
+    flex-direction: column;    
+}
+.choose_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* чтобы поработать с блоками */
+.choose_block-container {
+    display: flex;
+    /* чтобы сделать разрыв между блоками */
+    gap: 10px;
+    /* чтобы перенести элементы на следующую строку */
+    flex-wrap: wrap;
+    max-width: 650px;
+}
+.choose_block-container > div {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darksalmon;
+}
+/* чтобы отображать выбранные игроком элементы, создадим еще 1 класс, но не будем его назначать */
+.choosed_element {
+    border: 5px solid black;
+}
